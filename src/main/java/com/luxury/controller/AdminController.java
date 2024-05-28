@@ -20,6 +20,7 @@ import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
@@ -115,6 +116,20 @@ public class AdminController {
 
 
 
+// new delete variant
+@DeleteMapping("/deleteVariant/{id}")
+public ResponseEntity<?> deleteVariant(@PathVariable Long id) {
+    Optional<ProductVariants> productVariant = productVariantsRepo.findById(id);
+    if (productVariant.isPresent()) {
+        productVariantsRepo.delete(productVariant.get());
+        return ResponseEntity.ok().body(Collections.singletonMap("message", "Variant deleted successfully."));
+    } else {
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(Collections.singletonMap("message", "Variant not found."));
+    }
+}
+
+
+
     @PutMapping("updateProduct")
     public ResponseEntity<Product> updateProduct(@RequestBody ProductDTO productDTO) {
         Product product = new Product();
@@ -162,6 +177,18 @@ public class AdminController {
             productVariantsRepo.save(p);
         }
         return ResponseEntity.ok(saveProduct);
+    }
+
+
+    @DeleteMapping("/deleteProduct/{id}")
+    public ResponseEntity<?> deleteProduct(@PathVariable Long id) {
+        Optional<Product> product = productRepository.findById(id);
+        if (product.isPresent()) {
+            productRepository.delete(product.get());
+            return ResponseEntity.ok().body(Collections.singletonMap("message", "Product deleted successfully."));
+        } else {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(Collections.singletonMap("message", "Product not found."));
+        }
     }
 
 }
