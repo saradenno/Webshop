@@ -1,0 +1,36 @@
+{
+  "id": 1,
+  "name": "Rolex Cosmograph Daytona",
+  "price": 55000,
+  "description": "Deze Rolex Daytona, bekend om zijn ongeëvenaarde precisie en iconische status, is het ultieme statussymbool voor de elite.",
+  "imgURL": "https://placehold.co/600x350.png?text=Rolex+Cosmograph+Daytona",
+  "groupset": "18kt goud",
+  "material": "N/A",
+  "wheels": "N/A",
+  "productVariants": [
+    {
+      "id": 4,
+      "size": 6,
+      "color": "red",
+      "stock": 6,
+      "price": 55100.0,
+      "imgURL": "https://placehold.co/600x350.png?text=red+6"
+    },
+    {
+      "id": 6,
+      "size":45,
+      "color": "blue",
+      "stock": 7,
+      "price": 55300.0,
+      "imgURL": "https://placehold.co/600x350.png?text=blue+45"
+    },
+    {
+      "id": 3,
+      "size": 50,
+      "color": "blue",
+      "stock": 8,
+      "price": 55200.0,
+      "imgURL": "https://placehold.co/600x350.png?text=blue+50"
+    }
+  ]
+}

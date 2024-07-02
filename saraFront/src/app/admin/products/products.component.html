@@ -1,0 +1,27 @@
+<app-navbar></app-navbar>
+
+<br>
+<h4>Products</h4>
+
+<div class="container">
+  <div class="card" *ngFor="let p of productList">
+    <img src="{{p.imgURL}}" class="card-img-top" alt="Product Image">
+    <div class="card-body">
+      <h5 class="card-title">{{p.name}}</h5>
+      <p class="card-text">{{p.description}}</p>
+      <p class="card-text"><strong>Price:</strong> $ {{p.price}}</p>
+      <a href="/admin/edit-product/{{p.id}}" class="btn btn-primary">Edit</a>
+    
+    </div>
+    </div>
+  </div>
+  
+   
+
+  
+
+
+
+
+
+  <br><br><br>

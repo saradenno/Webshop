@@ -1,0 +1,67 @@
+
+<section class="py-5">
+  <div class="container px-4 px-lg-5 my-5">
+    <div class="row gx-4 gx-lg-5 align-items-center">
+      <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0" src="{{variantImgURL ? variantImgURL : product.imgURL}}" alt="..."
+                                 style="width: 500px;"/></div>
+      <div class="col-md-6">
+        <h1 class="display-5 fw-bolder">{{ product.name }}</h1>
+        <span *ngIf="selectedPrice !== null; else productPrice">€{{selectedPrice}}</span>
+        <ng-template #productPrice>
+          <span>€{{ product.price }}</span>
+        </ng-template>
+        <p class="lead">{{ product.description }}</p>
+
+
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Specificaties</th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Groepset</th>
+              <td>{{ product.groupset }}</td>
+            </tr>
+            <tr>
+              <th scope="row">Materiaal</th>
+              <td>{{product.material}}</td>
+            </tr>
+            <tr>
+              <th scope="row">Wielen</th>
+              <td colspan="2">{{product.wheels}}</td>
+            </tr>
+            <tr *ngIf="product.prodctVariantsList.length > 0">
+              <th scope="row">Color</th>
+              <td>
+                  <select [(ngModel)]="selectedColor" (ngModelChange)="updateVariant(); filterSizes()">
+                      <option value="" selected>Choose Color</option>
+                      <option *ngFor="let c of getUniqueColors()" [value]="c">{{c}}</option>
+                  </select>
+              </td>
+          </tr>
+          <tr *ngIf="sizes.length > 0">
+              <th scope="row">Size</th>
+              <td>
+                  <select [(ngModel)]="selectedSize" (ngModelChange)="updateVariant()">
+                      <option value="" selected>Choose Size</option>
+                      <option *ngFor="let size of sizes" [value]="size">{{size}}</option>
+                  </select>
+              </td>
+          </tr>
+          <tr *ngIf="selectedVariant && selectedVariant.stock <= 0">
+            <th scope="row" class="text-danger">Out of Stock</th>
+          </tr>
+          </tbody>
+        </table>
+
+
+        <button (click)="onBuyProduct(product)" [disabled]="product.prodctVariantsList.length > 0 && !(selectedColor && selectedSize && variantQuantity)" class="btn btn-primary float-right text-center" style="width: 300px;">
+          Voeg toe aan winkelmand</button>
+      </div>
+    </div>
+  </div>
+</section>
+

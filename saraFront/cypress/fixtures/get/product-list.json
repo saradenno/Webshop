@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "name": "Rolex Cosmograph Daytona",
+    "price": 55000.0,
+    "description": "Deze Rolex Daytona, bekend om zijn ongeëvenaarde precisie en iconische status, is het ultieme statussymbool voor de elite.",
+    "imgURL": "https://placehold.co/600x350.png?text=Rolex+Cosmograph+Daytona",
+    "groupset": "18kt goud",
+    "material": "N/A",
+    "wheels": "N/A"
+  },
+  {
+    "id": 2,
+    "name": "Burberry Bespoke Trench Coat",
+    "price": 10000.0,
+    "description": "Handgemaakt in Engeland met exclusieve materialen, deze Burberry trenchcoat biedt tijdloze elegantie en luxe.",
+    "imgURL": "https://placehold.co/600x350.png?text=Burberry+Bespoke+Trench+Coat",
+    "groupset": "Waterbestendige katoen",
+    "material": "N/A",
+    "wheels": "N/A"
+  },
+  {
+    "id": 3,
+    "name": "Chanel Classic Flap Bag",
+    "price": 8000.0,
+    "description": "Deze Chanel tas, met zijn iconische quiltdesign en kettingschouderband, is een symbool van luxueuze mode.",
+    "imgURL": "https://placehold.co/600x350.png?text=Chanel+Classic+Flap+Bag",
+    "groupset": "Lamshuid leder",
+    "material": "N/A",
+    "wheels": "N/A"
+  },
+  {
+    "id": 4,
+    "name": "Audemars Piguet Royal Oak Offshore",
+    "price": 40000.0,
+    "description": "De Royal Oak Offshore, met zijn gedurfde, innovatieve design, vertegenwoordigt de hoogste standaard van luxueuze horlogerie.",
+    "imgURL": "https://placehold.co/600x350.png?text=Audemars+Piguet+Royal+Oak+Offshore",
+    "groupset": "Roestvrijstaal",
+    "material": "N/A",
+    "wheels": "N/A"
+  },
+  {
+    "id": 5,
+    "name": "Hermès Silk Scarf",
+    "price": 1200.0,
+    "description": "Deze Hermès sjaal, vervaardigd uit de fijnste zijde, toont een kunstzinnig ontwerp dat elegantie en cultuur uitstraalt.",
+    "imgURL": "https://placehold.co/600x350.png?text=Hermès+Silk+Scarf",
+    "groupset": "100% zijde",
+    "material": "N/A",
+    "wheels": "N/A"
+  },
+  {
+    "id": 6,
+    "name": "Tesla Model S Plaid",
+    "price": 130000.0,
+    "description": "De Tesla Model S Plaid, een topmodel in elektrische luxeauto's, biedt ongeëvenaarde prestaties en toonaangevende technologie.",
+    "imgURL": "https://placehold.co/600x350.png?text=Tesla+Model+S+Plaid",
+    "groupset": "Elektrisch",
+    "material": "N/A",
+    "wheels": "N/A"
+  },
+  {
+    "id": 7,
+    "name": "Cartier Love Bracelet",
+    "price": 6500.0,
+    "description": "De Cartier Love Bracelet, versierd met diamanten, is een teken van tijdloze toewijding en luxe.",
+    "imgURL": "https://placehold.co/600x350.png?text=Cartier+Love+Bracelet",
+    "groupset": "18kt goud",
+    "material": "N/A",
+    "wheels": "N/A"
+  },
+  {
+    "id": 8,
+    "name": "Louis Vuitton Keepall Bandoulière 55",
+    "price": 4500.0,
+    "description": "De Keepall Bandoulière 55 van Louis Vuitton, perfect voor de wereldreiziger, combineert luxe met functionaliteit.",
+    "imgURL": "https://placehold.co/600x350.png?text=Louis+Vuitton+Keepall+Bandoulière+55",
+    "groupset": "Monogram canvas",
+    "material": "N/A",
+    "wheels": "N/A"
+  },
+  {
+    "id": 9,
+    "name": "Giorgio Armani Black Label Suit",
+    "price": 3500.0,
+    "description": "Deze Giorgio Armani pak, uit de Black Label collectie, biedt ongeëvenaarde Italiaanse vakmanschap en stijl.",
+    "imgURL": "https://placehold.co/600x350.png?text=Giorgio+Armani+Black+Label+Suit",
+    "groupset": "Wol",
+    "material": "N/A",
+    "wheels": "N/A"
+  }
+]

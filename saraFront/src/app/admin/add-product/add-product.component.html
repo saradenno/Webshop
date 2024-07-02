@@ -1,0 +1,150 @@
+<app-navbar></app-navbar>
+
+<br>
+<div class="container">
+    <h4>Add Product</h4>
+    <div class="card">
+        <form>
+            <div class="row">
+                <div class="col">
+                    <label>Product Name</label>
+                    <input 
+                        type="text"
+                        name="productName"
+                        placeholder="Product Name"
+                        class="form-control"
+                        [(ngModel)]="product.name"
+                    />
+                </div>  
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label>Description</label>
+                    <textarea 
+                        name="productDescription"
+                        placeholder="Description"
+                        class="form-control"
+                        [(ngModel)]="product.description"
+                    ></textarea>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label>Price</label>
+                    <input 
+                        type="number"
+                        name="productPrice"
+                        placeholder="Price"
+                        class="form-control"
+                        [(ngModel)]="product.price"
+                    />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label>Image URL</label>
+                    <input 
+                        type="text"
+                        name="imgURL"
+                        placeholder="Image URL"
+                        class="form-control"
+                        [(ngModel)]="product.imgURL"
+                    />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label>Groupset</label>
+                    <input 
+                        type="text"
+                        name="groupset"
+                        placeholder="Groupset"
+                        class="form-control"
+                        [(ngModel)]="product.groupset"
+                    />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label>Material</label>
+                    <input 
+                        type="text"
+                        name="material"
+                        placeholder="Material"
+                        class="form-control"
+                        [(ngModel)]="product.material"
+                    />
+                </div>
+            </div>
+            
+            <button type="button" class="btn btn-primary btn-sm" (click)="addVariant()">Add Variant</button>
+
+            <br> <br>
+            <!-- Variant input fields -->
+            <div *ngFor="let variant of variantList; let i = index">
+                <h5>Variant {{ i + 1 }}</h5>
+                <div class="row">
+                    <div class="col">
+                        <label>Color</label>
+                        <input 
+                            type="text"
+                            name="variantColor{{ i }}"
+                            placeholder="Color"
+                            class="form-control"
+                            [(ngModel)]="variant.color"
+                        />
+                    </div>
+                    <div class="col">
+                        <label>Size</label>
+                        <input 
+                            type="number"
+                            name="variantSize{{ i }}"
+                            placeholder="Size"
+                            class="form-control"
+                            [(ngModel)]="variant.size"
+                        />
+                    </div>
+                    <div class="col">
+                        <label>Stock</label>
+                        <input 
+                            type="number"
+                            name="variantStock{{ i }}"
+                            placeholder="Stock"
+                            class="form-control"
+                            [(ngModel)]="variant.stock"
+                        />
+                    </div>
+                    <div class="col">
+                        <label>Price</label>
+                        <input 
+                            type="number"
+                            name="variantPrice{{ i }}"
+                            placeholder="Price"
+                            class="form-control"
+                            [(ngModel)]="variant.price"
+                        />
+                    </div>
+                    <div class="col">
+                        <label>Image URL</label>
+                        <input 
+                            type="text"
+                            name="variantImgURL{{ i }}"
+                            placeholder="Image URL"
+                            class="form-control"
+                            [(ngModel)]="variant.imgURL"
+                        />
+                    </div>
+                    <br>
+                </div>
+            </div>
+            <button (click)="AddProduct()" class="btn btn-success">Submit</button>
+        </form>
+    </div>
+</div>
+
+
+
+
+
+
+
